@@ -15,6 +15,7 @@ class CheckSuperAdmin
         if (!$user) {
             abort(403, 'Please login first');
         }
+        
 
         if ($user->role == 1) {
             return redirect()->route('denied');
